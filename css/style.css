@@ -1,0 +1,167 @@
+:root{
+    --colorPrimario: #000000;
+    --colorSecundario: #ffffff;
+
+}
+
+
+/* Normalize css little trick to establish good parameters */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+/* End of the normalize trick */
+
+
+/* Utilidades Globales -----------------------------------------------*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.center-text{
+    text-align: center;
+}
+
+
+/* BEGINING OF INDEX.HTML STYLES ###################################################################################################################### */
+
+/* Header Area -----------------------------------------------*/
+.header{
+    background-color: var(--colorPrimario);
+    height: 15rem;
+}
+
+
+/* Contenedor Area -----------------------------------------------*/
+.contenedor{
+    width: min(90%,120rem);
+    margin: 0 auto;
+}
+
+
+/* Barra Area ----------------------------------------------- */
+.barra{
+   padding-top: 0rem;
+   height: 10rem; 
+}
+@media(min-width: 768px){
+    .barra{
+        display: flex;
+        text-align: right;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/* Logo Area -----------------------------------------------*/
+.logo{
+    height: 100%;
+    display: flex;
+    margin-left: 2rem;
+}
+.logo__img{
+    height: 63%;
+    margin: auto;    
+}
+
+
+/* Navegacion Area -----------------------------------------------*/
+@media(min-width: 768px){
+    .navegacion{
+        display: flex;
+        margin-right: 2rem;
+        gap: 3rem;
+    }
+}
+.navegacion__text{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 1rem;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--colorSecundario);
+    margin-top: 2rem;
+}
+.navegacion__activa{
+    border-bottom: 3px solid white;
+}
+.navegacion__text:hover{
+    border-bottom: 3px solid #348ac7;
+}
+
+
+/* Main Area -----------------------------------------------*/
+.contenedor-foto{
+    background-image: url(../img/landing.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 69rem;
+    margin: 0 auto;
+    padding-top: 21rem;
+}
+.contenedor-foto__texto{
+    color: white;
+    text-align: right;
+    margin: auto;
+    width: min(90%,120rem);
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 1.5rem;
+}
+.contenedor-foto__p1{
+    font-size: 5rem;
+    font-weight: 500;
+}
+.contenedor-foto__p2{
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+.contenedor-foto__p3{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+
+/* First Section Area -----------------------------------------------*/
+.section-1{
+    background-color: var(--colorPrimario);
+    width: 100%;
+    
+    height: auto;
+    color: var(--colorSecundario);
+}
+.section-1__content{
+    width: min(90%,120rem);
+    color: var(--colorSecundario);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);   
+ }
+ .section-1__content-1{
+     grid-column: 1 / 2;
+     padding: 3rem;
+     font-family: 'Open Sans', sans-serif;
+ }
+.section-1__content-2{
+    grid-column: 2 / 3;
+    padding: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.section-1__content-1 h1,
+.section-1__content-2 h1{
+    
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
